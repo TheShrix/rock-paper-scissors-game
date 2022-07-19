@@ -23,7 +23,7 @@ function playRound(playerSelection, computerSelection) {
     resultDiv.textContent = `You win! ${playerSelection} beats ${computerSelection}!`;
     playerScore++;
   } else if (playerSelection == computerSelection) {
-    resultDiv.textContent = `Tis but a draw, you both chose ${playerSelection}`
+    resultDiv.textContent = `Tis but a draw, you both chose ${playerSelection}`;
   } else {
     resultDiv.textContent = `You lose... ${computerSelection} beats ${playerSelection}.`;
     computerScore++;
@@ -41,10 +41,10 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-const buttons = document.querySelectorAll('.button');
-buttons.forEach((button)=>{
-  button.addEventListener('click',clickButton)
-})
+const buttons = document.querySelectorAll(".button");
+buttons.forEach((button) => {
+  button.addEventListener("click", clickButton);
+});
 
 function clickButton(e) {
   let playerChoice = e.target.id;
@@ -53,7 +53,7 @@ function clickButton(e) {
 }
 
 function gameOver() {
-  buttons.forEach((button)=>{
-    button.removeEventListener('click',clickButton);
-  })
+  buttons.forEach((button) => {
+    button.removeEventListener("click", clickButton);
+  });
 }
